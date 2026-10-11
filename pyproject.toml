@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tagpoint"
+version = "0.1.0"
+description = "Verify a PyPI release actually matches its GitHub tag — name AND content"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "hao li", email = "haoli5933@gmail.com" }]
+keywords = ["pypi", "github", "supply-chain", "release", "tag", "integrity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Security",
+]
+
+[project.scripts]
+tagpoint = "tagpoint.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/tagpoint"
+Repository = "https://github.com/hahahahahahahahah6/tagpoint"
+
+[tool.setuptools.packages.find]
+where = ["src"]
